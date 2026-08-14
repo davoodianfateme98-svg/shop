@@ -1,0 +1,746 @@
+* {
+    padding: none;
+    border: none;
+    margin: 0;
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+body {
+
+    height: 100vh;
+    color: black;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    font-size: 1.2vh;
+    color: black;
+    overflow: hidden;
+}
+
+.main {
+    width: 100vw;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-left {
+    flex-basis: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: normal;
+    padding: 50px;
+    flex-grow: 1;
+}
+
+.box-left h1 {
+    font-size: 9rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    transform: translate(-12vh, 18vh);
+}
+
+.onvan {
+    font-size: 7rem;
+    transform: rotate(90deg) translate(9vh, 22vh);
+    font-weight: 600;
+    letter-spacing: 4px;
+
+}
+
+.box-right {
+    flex-grow: 6;
+    flex-basis: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh
+}
+
+.text-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: space-between;
+    position: relative;
+    transform: translate(-7vh, 130px);
+    align-items: flex-end;
+}
+
+.text-box h2 {
+    margin-bottom: 2vh;
+    font-weight: bold;
+}
+
+.text-box p {
+    font-size: 13px;
+}
+
+.text-box .about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 40px;
+    flex-basis: 300px;
+    flex-grow: 1
+}
+
+.text-box .about .text-card {
+    flex-basis: 300px;
+}
+
+.text-card2 {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    transform: rotate(90deg)translateX(100%);
+    border-bottom: 3px solid #444
+}
+
+.hero-image {
+    align-self: flex-end;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    width: 100%;
+}
+
+.hero-image>img {
+    width: 100%;
+    max-width: 750px;
+    transform: translateY(100px)
+}
+
+.img-cover {
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    width: 60vw;
+    height: 40vh;
+    background: #bd2d01b2;
+    display: flex;
+    align-items: flex-end;
+    z-index: 4;
+}
+
+.img-cover button {
+    height: 48px;
+    width: 48px;
+    background: black;
+    cursor: pointer;
+
+}
+
+
+/* ریسپانسیو صفحه اول */
+
+@media (max-width: 480px) {
+
+    /* استایل موبایل */
+    .logo {
+        margin-right: 20vh;
+    }
+
+    #shopBtn {
+        transform: translateY(1.6vh);
+    }
+
+    .box-left h1 {
+        font-size: 9rem;
+        font-weight: 600;
+        letter-spacing: -1px;
+        transform: translate(9vh, 12vh);
+
+    }
+
+    .onvan {
+        display: none
+    }
+
+    .text-card {
+        display: none;
+    }
+
+    .img-cover {
+        height: 30vh;
+        right: 0;
+        width: 39vh;
+        bottom: 3vh;
+        align-items: flex-start;
+    }
+
+    .text-card2 {
+        transform: translate(-33.3vh, 3vh) rotate(90deg);
+
+    }
+
+    .hero-imag {
+        overflow: hidden;
+    }
+
+    .hero-image>img {
+        width: 600px;
+        transform: translate(10vh, -10vh)
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    /* استایل تبلت */
+    .main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero {
+        flex-direction: column;
+        flex-grow: 1;
+        flex-shrink: 1;
+        gap: 20px;
+    }
+
+    .box-left {
+        flex-basis: auto;
+        flex-grow: 1;
+        padding: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .box-left h1 {
+        font-size: 6rem;
+        transform: translate(0, 0);
+        /* وسط‌چین بشه */
+    }
+
+    .onvan {
+        transform: rotate(0deg);
+        font-size: 4rem;
+        margin-top: rem;
+    }
+
+    .box-right {
+        flex-grow: 1;
+        flex-basis: auto;
+        padding: 20px;
+        justify-content: flex-start;
+    }
+
+    .text-box {
+        flex-direction: column;
+        transform: none;
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .text-box .about {
+        transform: translate(0, -13vh);
+        gap: 13px;
+
+
+    }
+
+    .text-card {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+    }
+
+    .hero-image {
+        justify-content: center;
+        align-self: center;
+    }
+
+    .hero-image>img {
+        width: 100%;
+        max-width: 600px;
+        transform: translate(180px, -210px);
+    }
+
+    .img-cover {
+        width: 80vw;
+        height: 30vh;
+        bottom: 5vh;
+    }
+
+    .text-card2 {
+        transform: rotate(90deg);
+        font-size: 1.2em;
+        text-align: center;
+    }
+}
+
+
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: #f5f5f5;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    width: 94vw;
+    margin: 0 auto;
+    padding-top: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+}
+
+.nav-left ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: #111;
+    font-size: 12px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-left a:hover {
+    color: #f44336;
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    gap: 10vw;
+    font-size: 1.5vh;
+}
+
+#backBtn {
+    display: none;
+    cursor: pointer;
+
+}
+
+#backBtn:hover {
+    color: #f44336;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #111;
+    font-size: 12px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+    color: #f44336;
+}
+
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.5vw;
+    vertical-align: middle;
+    border-left: 0.7vh solid transparent;
+    border-right: 0.7vh solid transparent;
+    border-top: 0.9vh solid #111;
+    transition: transform 0.3s ease, border-top-color 0.3s ease;
+}
+
+.nav-right a:hover .arrow {
+    transform: rotate(180deg);
+    border-top-color: #f44336;
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 0.2vh;
+    background-color: #111;
+    border-radius: 0.1vh;
+}
+
+.sidebar {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    transform: translateX(2vh);
+    transition: 300ms all ease;
+}
+
+.openbtn:hover {
+    scale: 1.04;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+.second {
+    display: none;
+}
+
+/* صفحه دوم */
+
+.video {
+    width: 27vh;
+    height: 27vh;
+    position: absolute;
+    top: 17vh;
+    left: 10vh;
+    transform: translateX(-10%);
+    z-index: 10;
+    flex-basis: 300px;
+    cursor: pointer;
+    max-width: 750px;
+}
+
+.slide-text h1 {
+    font-size: 19px;
+    position: fixed;
+    top: 40vh;
+    left: 12vh;
+    transform: translateX(-10%);
+    z-index: 1;
+    cursor: pointer;
+    flex-basis: 300px;
+
+}
+
+.slide-text span {
+    font-size: 9px;
+    position: fixed;
+    top: 43vh;
+    left: 12vh;
+    transform: translateX(-10%);
+    z-index: 1;
+    cursor: pointer;
+    flex-basis: 300px;
+}
+
+.slide-text p {
+    font-size: 9px;
+    position: fixed;
+    top: 45vh;
+    left: 12vh;
+    transform: translateX(-10%);
+    z-index: 1;
+    cursor: pointer;
+    flex-basis: 300px;
+}
+
+.brand p {
+    position: fixed;
+    font-size: 100px;
+    bottom: 15vh;
+    left: 12vh;
+    transform: translateX(-10%);
+}
+
+.slider-dots {
+    position: fixed;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 55px 0 0 15px;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ddd;
+    display: inline-block;
+    transition: 0.3s;
+    transform: translateX(-80vh);
+    top: 20vh;
+}
+
+.dot.active {
+    background: #f44336;
+}
+
+.handimg {
+    position: fixed;
+    align-self: flex-end;
+    display: flex;
+    justify-content: end;
+    width: 80vh;
+    height: 80vh;
+    left: 9vh;
+    transform: translateX(45%);
+    top: 12vh;
+    z-index: 2;
+    max-width: 750px;
+    min-width: 380px;
+
+}
+
+.card {
+    position: fixed;
+    width: 30vh;
+    height: 20vh;
+    background-color: red;
+    transform: translateY(-27vh);
+    border-radius: 4px;
+    left: 82vh;
+    z-index: 1;
+}
+
+.btn {
+    position: fixed;
+    z-index: 2;
+    width: 12vh;
+    height: 4.5vh;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    transform: translateX(208.5%);
+    left: 75vh;
+    top: 37vh;
+    font-size: 13px;
+    border-radius: 0.5vh;
+    
+}
+
+.card-title h1 {
+    position: fixed;
+    color: rgba(255, 255, 255, 0.87);
+    transform: translateX(66%);
+    top: 1vh;
+    font-size: 10px;
+    
+    flex-basis: 300px;
+}
+
+.card-title h2 {
+    position: fixed;
+    color: rgba(255, 255, 255, 0.87);
+    transform: translateX(99%);
+    top: 3.8vh;
+    font-size: 8px;
+    
+}
+
+.right h1 {
+    position: fixed;
+    transform: translateX(80%);
+    right: 52vh;
+    position: absolute;
+    top: 22vh;
+    font-size: 10px;
+    color: #000000;
+    flex-basis: 300px;
+    padding: 10px 20px;
+
+}
+
+.right p {
+    position: fixed;
+    transform: translateX(80%);
+    right: 47vh;
+    top: 27vh;
+    font-size: 7.88px;
+    color: #444;
+    flex-basis: 300px;
+    padding: 10px 20px;
+
+}
+
+.right h2 {
+    position: fixed;
+    transform: translateX(50%);
+    right: 5vh;
+    top: 29vh;
+    font-size: 20px;
+    color: #000000;
+    transform: rotate(90deg)translateX(100%);
+    flex-basis: 300px;
+}
+
+.flash {
+    position: fixed;
+    top: 85vh;
+    right: 50vh;
+    transform: translateX(50vh);
+    background-color: red;
+    width: 12vh;
+    height: 15vh;
+    cursor: pointer;
+    border-radius: 8px;
+    max-width: 750px;
+}
+
+.adres p {
+    position: fixed;
+    transform: translateY(14vh);
+    right: 20vh;
+    font-size: 20px;
+}
+
+.adres span {
+    position: fixed;
+    transform: translateY(18vh);
+    right: 40.5vh;
+    font-size: 12px;
+}
+
+.adres h1 {
+    position: fixed;
+    transform: translateY(18vh);
+    right: 22vh;
+    font-size: 12px;
+}
+
+/* ریسپانسیو صفحه دوم */
+@media (max-width: 480px) {
+
+    /* استایل موبایل */
+    .logo {
+        margin-right: 20vh;
+    }
+
+    #shopBtn {
+        transform: translateY(1.6vh);
+    }
+
+    .box-left h1 {
+        font-size: 9rem;
+        font-weight: 600;
+        letter-spacing: -1px;
+        transform: translate(9vh, 12vh);
+
+    }
+
+    .video {
+        display: none;
+    }
+
+    .handimg {
+        transform: translate(-16vh, 5vh);
+        z-index: -2;
+        width: 58vh;
+        height: auto;
+
+    }
+
+    .brand p {
+        transform: translate(-10vh, 9vh);
+    }
+
+    .adres {
+        position: absolute;
+        top: 1vh;
+        z-index: -3;
+
+    }
+    .slide-text , .right{
+        display: none;
+    }
+    .card{
+        transform: translate(-26vh, 5vh);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* استایل تبلت */
+}
